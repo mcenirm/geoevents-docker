@@ -1,0 +1,7 @@
+.git/
+.gitignore
+db/
+docker-compose.yml
+README.md
+geoevents/.git/
+geoevents/.gitignore
