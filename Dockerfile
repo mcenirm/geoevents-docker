@@ -6,8 +6,9 @@ RUN apt-get autoremove -y
 RUN apt-get install -y --no-install-recommends python-gdal
 RUN rm -rf /var/lib/apt/lists/*
 
+COPY cache/ /tmp/cache
 COPY geoevents/geoevents/requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt
+RUN pip install --no-index --find-links=file:///tmp/cache  -r /tmp/requirements.txt
 
 RUN mkdir -p /usr/src/app
 COPY geoevents/ /usr/src/app
