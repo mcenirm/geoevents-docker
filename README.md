@@ -1,6 +1,6 @@
 Run [geoevents](https://github.com/ngageoint/geoevents) in a Docker container.
 
-1. `git clone https://github.com/ngageoint/geoevents.git`
+1. `git clone -b port_1_8 https://github.com/mcenirm/geoevents.git`
 1. `./refresh-requirements.bash`
 1. `docker-compose build`
 1. `docker-compose up -d db`
